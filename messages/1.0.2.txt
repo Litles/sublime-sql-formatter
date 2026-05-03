@@ -1,0 +1,3 @@
+sql-formatter 1.0.2 changelog
+
+Change cli-sql-formatter to sql-formatter
