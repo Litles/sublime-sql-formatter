@@ -20,9 +20,9 @@ class SqlFormatterDialectSelect(sublime_plugin.TextCommand):
     def run(self, edit):
         dialects = {
             'sql': 'Standard SQL',
-            'n1ql': 'Couchbase N1QL',
-            'db2': 'IBM DB2',
-            'pl/sql': 'Oracle PL/SQL'
+            'hive': 'Apache Hive',
+            'spark': 'Apache Spark',
+            'plsql': 'Oracle PL/SQL'
         }
 
         def run_command(index):

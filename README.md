@@ -1,14 +1,14 @@
 # sublime-sql-formatter
 
-A Sublime Text plugin that runs the [cli-sql-formatter](https://github.com/kufii/cli-sql-formatter) node library on the current file. cli-sql-formatter is in turn a command line interface for the [sql-formatter](https://github.com/zeroturnaround/sql-formatter) node library.
+A Sublime Text plugin that runs the [sql-formatter](https://github.com/sql-formatter-org/sql-formatter) node library on the current file.
 
 ## Installation
 
 ### Dependencies
 
-This plugin requires node.js, and also requires cli-sql-formatter to be globally installed.
+This plugin requires node.js, and also requires sql-formatter to be globally installed.
 
-`npm install -g cli-sql-formatter`
+`npm install -g sql-formatter`
 
 ### Plugin Installation
 

@@ -8,14 +8,30 @@
 
 	// The default dialect to use for formatting
 	// Options:
-	// "sql" - Standard SQL
-	// "n1ql" - Couchbase N1QL
-	// "db2" - IBM DB2
-	// "pl/sql" - Oracle PL/SQL
+	// sql - Standard SQL
+	// bigquery - GCP BigQuery
+	// clickhouse - Clickhouse
+	// db2 - IBM DB2
+	// db2i - IBM DB2i (experimental)
+	// duckdb - DuckDB
+	// hive - Apache Hive
+	// mariadb - MariaDB
+	// mysql - MySQL
+	// tidb - TiDB
+	// n1ql - Couchbase N1QL
+	// plsql - Oracle PL/SQL
+	// postgresql - PostgreSQL
+	// redshift - Amazon Redshift
+	// singlestoredb - SingleStoreDB
+	// snowflake - Snowflake
+	// spark - Apache Spark
+	// sqlite - SQLite
+	// transactsql - SQL Server Transact-SQL
+	// trino - Trino / Presto
 	"default_dialect": "sql",
 
 	// The number of spaces to indent with
-	"indent_size": 2,
+	"indent_size": 4,
 
 	// Indent with tabs instead of spaces
 	"use_tabs": false

@@ -1,4 +1,5 @@
 from subprocess import Popen, PIPE
+import json
 
 import sublime
 
@@ -13,9 +14,9 @@ def _get_node_path():
 
 
 def _get_sql_formatter_path():
-    node = pathutil.find_executable(preferences.get_path(), 'cli-sql-formatter')
+    node = pathutil.find_executable(preferences.get_path(), 'sql-formatter')
     if not node:
-        raise Exception('Could not find cli-sql-formatter. Check that it is installed and that your configuration is correct.')
+        raise Exception('Could not find sql-formatter. Check that it is installed and that your configuration is correct.')
     return node
 
 
@@ -30,12 +31,14 @@ def format_sql(sql, dialect=None):
         dialect = preferences.get_pref('default_dialect')
 
     if dialect:
-        cmd.extend(['-d', dialect])
+        cmd.extend(['-l', dialect])
 
+    # add config param
     if preferences.get_pref('use_tabs'):
-        cmd.extend(['-t'])
+        config = json.dumps({"useTabs": True}, separators=(',', ':'))
     else:
-        cmd.extend(['-i', str(preferences.get_pref('indent_size'))])
+        config = json.dumps({"tabWidth": preferences.get_pref('indent_size')}, separators=(',', ':'))
+    cmd.extend(['-c', config])
 
     print(cmd)
 
